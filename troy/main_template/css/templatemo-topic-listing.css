@@ -12,13 +12,13 @@ https://templatemo.com/tm-590-topic-listing
 :root {
   --white-color:                  #ffffff;
   --primary-color:                #13547a;
-  --secondary-color:              #80d0c7;
+  --secondary-color:              #3f12f0;
   --section-bg-color:             #f0f8ff;
-  --custom-btn-bg-color:          #80d0c7;
-  --custom-btn-bg-hover-color:    #13547a;
+  --custom-btn-bg-color:          #193178;
+  --custom-btn-bg-hover-color:    #1694dc;
   --dark-color:                   #000000;
   --p-color:                      #717275;
-  --border-color:                 #7fffd4;
+  --border-color:                 #334644;
   --link-hover-color:             #13547a;
 
   --body-font-family:             'Open Sans', sans-serif;
@@ -486,7 +486,7 @@ strong {
   HERO        
 -----------------------------------------*/
 .hero-section {
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  background-image: linear-gradient(15deg, #f2f5f7 0%, #3f12f0 100%);
   position: relative;
   overflow: hidden;
   padding-top: 150px;
