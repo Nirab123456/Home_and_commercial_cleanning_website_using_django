@@ -18,3 +18,7 @@ from datetime import timedelta
 
 def home(request):
     return render(request,'home.html')
+
+
+def contact(request):
+    return render(request,'contact.html')
