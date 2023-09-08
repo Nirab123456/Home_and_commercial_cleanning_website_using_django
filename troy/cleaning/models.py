@@ -17,6 +17,7 @@ class contact_to_hire(models.Model):
     subject = models.CharField(max_length=100)
     message = models.TextField(max_length=1000,blank=True,null=True)
     company = models.CharField(max_length=100,blank=True,null=True)
+    seen = models.BooleanField(default=False)
     date = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return self.name
