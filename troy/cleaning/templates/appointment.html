@@ -1,0 +1,139 @@
+{% load main_template %}
+{% block content %}
+{% include 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Purple Buzz - Contact Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="{% main_template 'assets/img/apple-icon.png' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Load Require CSS -->
+    <link href="{% main_template 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="{% main_template 'assets/css/boxicon.min.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="{% main_template 'assets/css/templatemo.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% main_template 'assets/css/custom.css' %}">
+<!--
+    
+TemplateMo 561 Purple Buzz
+
+https://templatemo.com/tm-561-purple-buzz
+
+-->
+</head>
+
+<body>
+    {% include 'base_nav.html' %}
+
+
+    <!-- Start Banner Hero -->
+    <section class="bg-light">
+        <div class="container py-4">
+            <div class="row align-items-center justify-content-between">
+                <div class="contact-header col-lg-4">
+                    <h1 class="h2 pb-3 text-primary">Book an appoinment</h1>
+                    <h3 class="h4 regular-400">We will replay in munites</h3>
+                    
+                </div>
+                <div class="contact-img col-lg-5 align-items-end col-md-4">
+                    <img src="{% main_template './assets/img/pricing.svg' %}">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Banner Hero -->
+
+
+    <!-- Start Contact -->
+    <section class="container py-5">
+
+        <h1 class="col-12 col-xl-8 h2 text-left text-primary pt-3">Select your appoinment schedule</h1>
+
+        <div class="row pb-4">
+
+
+            <!-- Start Contact Form -->
+            <div class="col-lg-8 ">
+                <form id="appointment_save" class="contact-form row" method="post" action="{% url 'appointment_save' %}" role="form">
+                    {% csrf_token %}
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" required class="form-control form-control-lg light-300" id="floatingname" name="name" placeholder="Name">
+                            <label for="floatingname light-300">Name</label>
+                        </div>
+                    </div><!-- End Input Name -->
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="email" required class="form-control form-control-lg light-300" id="floatingemail" name="email" placeholder="Email">
+                            <label for="floatingemail light-300">Email</label>
+                        </div>
+                    </div><!-- End Input Email -->
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-lg light-300" required id="phone" name="phone" placeholder="Phone">
+                            <label for="floatingphone light-300">Phone</label>
+                        </div>
+                    </div><!-- End Input Phone -->
+
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="date" class="form-control form-control-lg light-300" id="floatingcompany" name="appoinment_date" placeholder="Choose the date">
+                            <label for="floatingcompany light-300">Appointment date</label>
+                        </div>
+                    </div><!-- End Input Company Name -->
+                    
+
+                    
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-lg light-300" id="floatingcompany" name="address" placeholder="Company name if available">
+                            <label for="floatingcompany light-300">Address</label>
+                        </div>
+                    </div><!-- End Input Company Name -->
+
+
+
+                    <div class="col-md-12 col-12 m-auto text-end">
+                        <button type="submit" class="btn btn-secondary rounded-pill px-md-5 px-4 py-2 radius-0 text-light light-300">Send Message</button>
+                    </div>
+
+                </form>
+                <script>
+                    function appointment_save() {
+                        document.getElementById("appointment_save").action = "{% url 'appointment_save' %}";
+                        document.getElementById("appointment_save").submit();
+                    }
+                </script>
+
+            </div>
+            <!-- End Contact Form -->
+
+
+        </div>
+    </section>
+    <!-- End Contact -->
+
+
+    {% include 'footer.html' %}
+
+
+    <!-- Bootstrap -->
+    <script src="{% main_template 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Templatemo -->
+    <script src="{% main_template 'assets/js/templatemo.js' %}"></script>
+    <!-- Custom -->
+    <script src="{% main_template 'assets/js/custom.js' %}"></script>
+
+</body>
+
+</html>
+{% endblock %}

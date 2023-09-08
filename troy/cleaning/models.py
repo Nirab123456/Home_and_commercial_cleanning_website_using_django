@@ -22,5 +22,14 @@ class contact_to_hire(models.Model):
     def __str__(self):
         return self.name
     
-
-    
+class appointment(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=100)
+    phone = models.CharField(max_length=100)
+    appointment_date = models.DateField()
+    adress = models.CharField(max_length=100)
+    seen = models.BooleanField(default=False)
+    date = models.DateTimeField(auto_now_add=True)    
+    def __str__(self):
+        return self.name
