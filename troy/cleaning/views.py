@@ -65,12 +65,14 @@ def appointment_save(request):
         print(appointment_date)
         adress = request.POST.get('address', '')
         print(adress)
+        topic = request.POST.get('topic', '')
+        print(topic)
 
-        if name == '' or email == '' or phone == '' or appointment_date == '' or adress == '':
+        if name == '' or email == '' or phone == '' or appointment_date == '' or adress == '' or topic == '':
             messages.error(request, 'Please fill all the fields')
             return redirect('appointment')
         else:
-            appointment = APPOINMENT(name=name, email=email, phone=phone, appointment_date=appointment_date, adress=adress)
+            appointment = APPOINMENT(name=name, email=email, phone=phone, appointment_date=appointment_date, adress=adress, topic=topic)
             appointment.save()
             return redirect('appointment')
         

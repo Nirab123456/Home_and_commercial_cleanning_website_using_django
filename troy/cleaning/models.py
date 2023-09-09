@@ -23,12 +23,18 @@ class contact_to_hire(models.Model):
         return self.name
     
 class appointment(models.Model):
+    TOPIC_CHOICES = [
+        ('commercial', 'commercial'),
+        ('resedential', 'resedential'),
+    ]
+
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)
     phone = models.CharField(max_length=100)
     appointment_date = models.DateField()
     adress = models.CharField(max_length=100)
+    topic = models.CharField(max_length=100, choices=TOPIC_CHOICES)
     seen = models.BooleanField(default=False)
     date = models.DateTimeField(auto_now_add=True)    
     def __str__(self):
