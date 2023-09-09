@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import contact_to_hire , appointment
+from .models import contact_to_hire , appointment , Record_mail_me
 
 # Register your models here.
 
@@ -72,5 +72,26 @@ class appointmentAdmin(admin.ModelAdmin):
             return False
         return True
     
+@admin.register(Record_mail_me)
+class Record_mail_meAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'phone', 'topic', 'created_at')
+    list_filter = ('name', 'email', 'phone', 'topic', 'created_at')
+    ordering = ('name',)
+    search_fields = ('name', 'email', 'phone', 'topic', 'created_at')
     
+    def has_change_permission(self, request, obj=None):
+        """
+        Only allow superusers to change the 'seen' field.
+        """
+        if obj is not None and not request.user.is_superuser:
+            return False
+        return True
+    
+    def has_delete_permission(self, request, obj=None):
+        """
+        Only allow superusers to delete items.
+        """
+        if obj is not None and not request.user.is_superuser:
+            return False
+        return True
 

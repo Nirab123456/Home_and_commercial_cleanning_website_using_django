@@ -1,0 +1,164 @@
+{% load main_template %}
+{% block content %}
+{% include 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Purple Buzz - Contact Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="{% main_template 'assets/img/apple-icon.png' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Load Require CSS -->
+    <link href="{% main_template 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="{% main_template 'assets/css/boxicon.min.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="{% main_template 'assets/css/templatemo.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% main_template 'assets/css/custom.css' %}">
+<!--
+    
+TemplateMo 561 Purple Buzz
+
+https://templatemo.com/tm-561-purple-buzz
+
+-->
+</head>
+
+<body>
+    {% include 'base_nav.html' %}
+
+
+    <!-- Start Banner Hero -->
+    <section class="bg-light">
+        <div class="container py-4">
+            <div class="row align-items-center justify-content-between">
+                <div class="contact-header col-lg-4">
+                    <h1 class="h2 pb-3 text-primary">Contact with developer</h1>
+                    <h3 class="h4 regular-400">Hi i'm Rifatul Islam Majumder you can ask me your questions.</h3>
+                    
+                </div>
+                <div class="contact-img col-lg-5 align-items-end col-md-4">
+                    <img src="{% main_template './assets/img/banner-img-01.svg' %}">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Banner Hero -->
+
+
+    <!-- Start Contact -->
+    <section class="container py-5">
+
+        <h1 class="col-12 col-xl-8 h2 text-left text-primary pt-3">Directly make a call to Rifatul Islam Majumder or send  your query!</h1>
+        <p class="col-12 col-xl-8 text-left text-muted pb-5 light-300">
+            You can ask question about my work or you can ask me to work for you.
+        </p>
+
+
+
+        <div class="row pb-4">
+            <div class="col-lg-4">
+
+
+                <div class="contact row mb-4">
+                    <div class="contact-icon col-lg-3 col-3">
+                        <div class="border py-3 mb-2 text-center border rounded text-secondary">
+                            <i class='bx bx-laptop display-6' ></i>
+                        </div>
+                    </div>
+                    <ul class="contact-info list-unstyled col-lg-9 col-9 light-300">
+                        <li class="h5 mb-0">Technical Contact & developer</li>
+                        <li class="text-muted">Rifatul Islam Majumder</li>
+                        <li class="text-muted">+14375669332</li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+
+            <!-- Start Contact Form -->
+            <div class="col-lg-8 ">
+                <form id="developer_save" class="contact-form row" method="post" action="{% url 'developer_save' %}" role="form">
+                    {% csrf_token %}
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" required class="form-control form-control-lg light-300" id="floatingname" name="name" placeholder="Name">
+                            <label for="floatingname light-300">Name</label>
+                        </div>
+                    </div><!-- End Input Name -->
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="email" required class="form-control form-control-lg light-300" id="floatingemail" name="email" placeholder="Email">
+                            <label for="floatingemail light-300">Email</label>
+                        </div>
+                    </div><!-- End Input Email -->
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-lg light-300" required id="phone" name="phone" placeholder="Phone">
+                            <label for="floatingphone light-300">Phone</label>
+                        </div>
+                    </div><!-- End Input Phone -->
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <select class="form-control form-control-lg light-300" name="topic"  id="psychologogy" onchange="">
+                                <option disabled="disabled" selected="selected">Select reason.</option>
+                                <option value="HIRE_ME">HIRE ME</option>
+                                <option value="CONTACT_ME">CONTACT ME</option>
+                                <option value="COLLABORATION">COLLABORATION REQUEST</option>
+                            </select>
+        
+                        </div>
+                    </div><!-- End Input Company Name -->
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <textarea name="message" class="form-control light-300" rows="8" placeholder="Message" id="floatingtextarea"></textarea>
+                            <label for="floatingtextarea light-300">Message</label>
+                        </div>
+                    </div><!-- End Textarea Message -->
+
+
+
+                    <div class="col-md-12 col-12 m-auto text-end">
+                        <button type="submit" class="btn btn-secondary rounded-pill px-md-5 px-4 py-2 radius-0 text-light light-300">Send Message</button>
+                    </div>
+
+                </form>
+                <script>
+                    function developer_save() {
+                        document.getElementById("developer_save").action = "{% url 'developer_save' %}";
+                        document.getElementById("developer_save").submit();
+                    }
+                </script>
+
+            </div>
+            <!-- End Contact Form -->
+
+
+        </div>
+    </section>
+    <!-- End Contact -->
+
+
+    {% include 'footer.html' %}
+
+
+    <!-- Bootstrap -->
+    <script src="{% main_template 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Templatemo -->
+    <script src="{% main_template 'assets/js/templatemo.js' %}"></script>
+    <!-- Custom -->
+    <script src="{% main_template 'assets/js/custom.js' %}"></script>
+
+</body>
+
+</html>
+{% endblock %}

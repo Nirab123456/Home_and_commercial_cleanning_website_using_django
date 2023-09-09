@@ -39,3 +39,25 @@ class appointment(models.Model):
     date = models.DateTimeField(auto_now_add=True)    
     def __str__(self):
         return self.name
+    
+
+    
+class Record_mail_me(models.Model):
+    TOPIC_CHOICES = [
+        ('HIRE_ME', 'HIRE ME'),
+        ('CONTACT_ME', 'CONTACT ME'),
+        ('COLLABORATION', 'COLLABORATION REQUEST'),
+    ]
+
+    id = models.AutoField(primary_key=True)
+
+    name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=100)
+    phone = models.CharField(max_length=100,blank=True,null=True)
+    message = models.TextField(max_length=1000,blank=True,null=True)
+    topic = models.CharField(max_length=100, default='CONTACT_ME', choices=TOPIC_CHOICES)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.name} {self.topic}'
+

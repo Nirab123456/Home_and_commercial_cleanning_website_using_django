@@ -14,7 +14,7 @@ from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 from datetime import timedelta
-from .models import contact_to_hire
+from .models import contact_to_hire, Record_mail_me
 from .models import appointment as APPOINMENT
 
 def home(request):
@@ -78,3 +78,25 @@ def appointment_save(request):
         
     else:
         return redirect('appointment')
+    
+
+def developer(request):
+    return render(request,'about_developer.html')
+
+def developer_save(request):
+    if request.method == 'POST':
+        name = request.POST.get('name', '')
+        email = request.POST.get('email', '')
+        phone = request.POST.get('phone', '')  # Use get() with a default value
+        topic = request.POST.get('topic', '')
+        message = request.POST.get('message', '')
+        if name == '' or email == '' or phone == '' or topic == '':
+            messages.error(request, 'Please fill all the fields')
+            return redirect('developer')
+        else:
+            contact = Record_mail_me(name=name, email=email, phone=phone, topic=topic, message=message)
+            contact.save()
+            return redirect('developer')
+
+    else:
+        return redirect('developer')
