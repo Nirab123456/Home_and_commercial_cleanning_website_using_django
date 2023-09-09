@@ -14,7 +14,7 @@ from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 from datetime import timedelta
-from .models import contact_to_hire, Record_mail_me
+from .models import contact_to_hire, Record_mail_me , SUBSCRIPTION
 from .models import appointment as APPOINMENT
 
 def home(request):
@@ -100,3 +100,18 @@ def developer_save(request):
 
     else:
         return redirect('developer')
+    
+
+def subscription(request):
+    if request.method == 'POST':
+        email = request.POST.get('email', '')
+        if email == '':
+            messages.error(request, 'Please fill all the fields')
+            return redirect('home')
+        else:
+            contact = SUBSCRIPTION(email=email)
+            contact.save()
+            return redirect('home')
+
+    else:
+        return redirect('home')

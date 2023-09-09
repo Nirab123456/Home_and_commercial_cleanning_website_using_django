@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import contact_to_hire , appointment , Record_mail_me
+from .models import contact_to_hire , appointment , Record_mail_me , SUBSCRIPTION
 
 # Register your models here.
 
@@ -95,3 +95,25 @@ class Record_mail_meAdmin(admin.ModelAdmin):
             return False
         return True
 
+@admin.register(SUBSCRIPTION)
+class SUBSCRIPTIONAdmin(admin.ModelAdmin):
+    list_display = ('email', 'date')
+    list_filter = ('email', 'date')
+    ordering = ('email',)
+    search_fields = ('email', 'date')
+    
+    def has_change_permission(self, request, obj=None):
+        """
+        Only allow superusers to change the 'seen' field.
+        """
+        if obj is not None and not request.user.is_superuser:
+            return False
+        return True
+    
+    def has_delete_permission(self, request, obj=None):
+        """
+        Only allow superusers to delete items.
+        """
+        if obj is not None and not request.user.is_superuser:
+            return False
+        return True

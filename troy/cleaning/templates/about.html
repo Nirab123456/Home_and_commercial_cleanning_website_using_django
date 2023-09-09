@@ -244,7 +244,8 @@ https://templatemo.com/tm-561-purple-buzz
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mx-auto my-4 p-3">
-                    <form action="#" method="get"><h1 class="h2 text-center">subscribe to our up-to date promotions</h1>
+                    <form action="{% url 'subscription' %}" method="POST"><h1 class="h2 text-center">subscribe to our up-to date promotions</h1>
+                    {% csrf_token %}
                     <div class="input-group py-3">
                     
                         <input name="email" type="text" class="form-control form-control-lg rounded-pill rounded-end" id="email" placeholder="Your Email" aria-label="Your Email">

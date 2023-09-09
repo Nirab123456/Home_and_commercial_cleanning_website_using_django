@@ -61,3 +61,9 @@ class Record_mail_me(models.Model):
     def __str__(self):
         return f'{self.name} {self.topic}'
 
+class SUBSCRIPTION(models.Model):
+    id = models.AutoField(primary_key=True)
+    email = models.EmailField(max_length=100)
+    date = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return self.email
