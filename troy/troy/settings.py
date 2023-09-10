@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'troy.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'troy',
+        'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'Nahida@123',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'PASSWORD': '2lAGbJCyqHAvw3IprWLK',
+        'HOST': 'containers-us-west-102.railway.app',
+        'PORT': '6034',
     }
 }
 
