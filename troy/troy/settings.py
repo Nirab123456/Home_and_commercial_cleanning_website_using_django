@@ -34,9 +34,9 @@ SECRET_KEY = 'django-insecure-rgjndr&73spi-+bsb2rr+lf9ljpe5lf+8^_44-747*_wxvwx$@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','troy-production.up.railway.app','cleaninginthe6ix.com']
-CSRF_TRUSTED_ORIGINS = ['127.0.0.1','troy-production.up.railway.app','cleaninginthe6ix.com']
-CORS_ALLOWED_ORIGINS = ['127.0.0.1','troy-production.up.railway.app','cleaninginthe6ix.com']
+ALLOWED_HOSTS = ['127.0.0.1','troy-production.up.railway.app','cleaninginthe6ix.com','https://troy-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['127.0.0.1','troy-production.up.railway.app','cleaninginthe6ix.com','https://troy-production.up.railway.app']
+CORS_ALLOWED_ORIGINS = ['127.0.0.1','troy-production.up.railway.app','cleaninginthe6ix.com','https://troy-production.up.railway.app']
 
 
 # Application definition
@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cleaning'
+    'corsheaders',
+
 ]
 
 MIDDLEWARE = [
@@ -59,9 +61,15 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'troy.urls'
+CORS_ALLOWED_ORIGINS = [
+    # Add other trusted origins as needed
+]
+
+
 
 TEMPLATES = [
     {
