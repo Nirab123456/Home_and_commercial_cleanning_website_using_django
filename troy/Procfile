@@ -1,1 +1,2 @@
 web: gunicorn troy.wsgi --log-file -
+web: gunicorn your_project_name.wsgi:application --static-map /static=static
