@@ -8,4 +8,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('cleaning.urls')),
 
-]+static(settings.MAIN_TAMPLATE_URL, document_root=settings.MAIN_TAMPLATE_ROOT)
+]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+    

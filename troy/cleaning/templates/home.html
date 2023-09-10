@@ -1,4 +1,4 @@
-{% load main_template %}
+{% load static %}
 {% block content %}
 {% include 'base.html' %}
 <!DOCTYPE html>
@@ -8,17 +8,17 @@
     <title>Purple Buzz HTML Template with Bootstrap 5 Beta 1</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="{% main_template 'assets/img/apple-icon.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'assets/img/apple-icon.png' %}">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
     <!-- Load Require CSS -->
-    <link href="{% main_template 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
     <!-- Font CSS -->
-    <link href="{% main_template 'assets/css/boxicon.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/boxicon.min.css' %}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Load Tempalte CSS -->
-    <link rel="stylesheet" href="{% main_template 'assets/css/templatemo.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo.css' %}">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% main_template 'assets/css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
 <!--
     
 TemplateMo 561 Purple Buzz
@@ -159,7 +159,7 @@ https://templatemo.com/tm-561-purple-buzz
 
             <div class="col-xl-3 col-md-4 col-sm-6 project Residental">
                 <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="service card-img" src="{% main_template './assets/img/Apartments.jpg' %}" alt="Card image">
+                    <img class="service card-img" src="{% static './assets/img/Apartments.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
                             <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Apartments</span>
@@ -171,7 +171,7 @@ https://templatemo.com/tm-561-purple-buzz
             
             <div class="col-xl-3 col-md-4 col-sm-6 project Residental">
                 <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="service card-img" src="{% main_template './assets/img/Houses.jpg' %}" alt="Card image">
+                    <img class="service card-img" src="{% static './assets/img/Houses.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
                             <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Houses</span>
@@ -183,7 +183,7 @@ https://templatemo.com/tm-561-purple-buzz
             
             <div class="col-xl-3 col-md-4 col-sm-6 project Residental">
                 <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="service card-img" src="{% main_template './assets/img/Airbnb.jpg' %}" alt="Card image">
+                    <img class="service card-img" src="{% static './assets/img/Airbnb.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
                             <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Airbnb</span>
@@ -195,7 +195,7 @@ https://templatemo.com/tm-561-purple-buzz
 
             <div class="col-xl-3 col-md-4 col-sm-6 project Residental">
                 <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="service card-img" src="{% main_template './assets/img/Post_construction.jpg' %}" alt="Card image">
+                    <img class="service card-img" src="{% static './assets/img/Post_construction.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
                             <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Post-construction</span>
@@ -207,7 +207,7 @@ https://templatemo.com/tm-561-purple-buzz
 
             <div class="col-xl-3 col-md-4 col-sm-6 project Residental">
                 <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="service card-img" src="{% main_template './assets/img/Deep_Cleaning.jpg' %}" alt="Card image">
+                    <img class="service card-img" src="{% static './assets/img/Deep_Cleaning.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
                             <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Deep Cleaning</span>
@@ -223,7 +223,7 @@ https://templatemo.com/tm-561-purple-buzz
             <!-- Start Recent Work -->
             <div class="col-xl-3 col-md-4 col-sm-6 project Commercial ">
                 <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="{% main_template './assets/img/office.jpg' %}" alt="Card image">
+                    <img class="card-img" src="{% static './assets/img/office.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
                             <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Offices</span>
@@ -235,7 +235,7 @@ https://templatemo.com/tm-561-purple-buzz
             <!-- Start Recent Work -->
             <div class="col-xl-3 col-md-4 col-sm-6 project Commercial ">
                 <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="{% main_template './assets/img/factories.jpg' %}" alt="Card image">
+                    <img class="card-img" src="{% static './assets/img/factories.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
                             <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Factory's</span>
@@ -247,7 +247,7 @@ https://templatemo.com/tm-561-purple-buzz
             <!-- Start Recent Work -->
             <div class="col-xl-3 col-md-4 col-sm-6 project Commercial ">
                 <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="{% main_template './assets/img/dealership.jpg' %}" alt="Card image">
+                    <img class="card-img" src="{% static './assets/img/dealership.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
                             <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Dealership</span>
@@ -259,7 +259,7 @@ https://templatemo.com/tm-561-purple-buzz
             <!-- Start Recent Work -->
             <div class="col-xl-3 col-md-4 col-sm-6 project Commercial ">
                 <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="{% main_template './assets/img/Condominiums.jpg' %}" alt="Card image">
+                    <img class="card-img" src="{% static './assets/img/Condominiums.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
                             <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Condominiums</span>
@@ -272,7 +272,7 @@ https://templatemo.com/tm-561-purple-buzz
             <!-- Start Recent Work -->
             <div class="col-xl-3 col-md-4 col-sm-6 project Commercial ">
                 <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="{% main_template './assets/img/schools_1.jpg' %}" alt="Card image">
+                    <img class="card-img" src="{% static './assets/img/schools_1.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
                             <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">School</span>
@@ -284,7 +284,7 @@ https://templatemo.com/tm-561-purple-buzz
             <!-- Start Recent Work -->
             <div class="col-xl-3 col-md-4 col-sm-6 project Commercial ">
                 <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="{% main_template './assets/img/rental.jpg' %}" alt="Card image">
+                    <img class="card-img" src="{% static './assets/img/rental.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
                             <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Rental</span>
@@ -297,7 +297,7 @@ https://templatemo.com/tm-561-purple-buzz
             <!-- Start Recent Work -->
             <div class="col-xl-3 col-md-4 col-sm-6 project Commercial ">
                 <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="{% main_template './assets/img/medical.jpg' %}" alt="Card image">
+                    <img class="card-img" src="{% static './assets/img/medical.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
                             <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Medical buildings</span>
@@ -329,7 +329,7 @@ https://templatemo.com/tm-561-purple-buzz
                 <!-- Start Recent Work -->
                 <div class="col-md-4 mb-3">
                     <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
-                        <img class="recent-work-img card-img" src="{% main_template './assets/img/toronto_1.jpg' %}" alt="Card image">
+                        <img class="recent-work-img card-img" src="{% static './assets/img/toronto_1.jpg' %}" alt="Card image">
                         <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
                             <div class="recent-work-content text-start mb-3 ml-3 text-dark">
                                 <h3 class="card-title light-300">Toronto</h3>
@@ -342,7 +342,7 @@ https://templatemo.com/tm-561-purple-buzz
                 <!-- Start Recent Work -->
                 <div class="col-md-4 mb-3">
                     <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
-                        <img class="recent-work-img card-img" src="{% main_template './assets/img/vaughan.jpg' %}" alt="Card image">
+                        <img class="recent-work-img card-img" src="{% static './assets/img/vaughan.jpg' %}" alt="Card image">
                         <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
                             <div class="recent-work-content text-start mb-3 ml-3 text-dark">
                                 <h3 class="card-title light-300">Vaughan</h3>
@@ -356,7 +356,7 @@ https://templatemo.com/tm-561-purple-buzz
                 <!-- Start Recent Work -->
                 <div class="col-md-4 mb-3">
                     <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
-                        <img class="recent-work-img card-img" src="{% main_template './assets/img/brampton.jpg' %}" alt="Card image">
+                        <img class="recent-work-img card-img" src="{% static './assets/img/brampton.jpg' %}" alt="Card image">
                         <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
                             <div class="recent-work-content text-start mb-3 ml-3 text-dark">
                                 <h3 class="card-title light-300">Brampton</h3>
@@ -379,11 +379,11 @@ https://templatemo.com/tm-561-purple-buzz
     {% include 'footer.html' %}
 
     <!-- Bootstrap -->
-    <script src="{% main_template 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
     <!-- Load jQuery require for isotope -->
-    <script src="{% main_template 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
     <!-- Isotope -->
-    <script src="{% main_template 'assets/js/isotope.pkgd.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.pkgd.js' %}"></script>
     <!-- Page Script -->
     <script>
         $(window).load(function() {
@@ -406,9 +406,9 @@ https://templatemo.com/tm-561-purple-buzz
         });
     </script>
     <!-- Templatemo -->
-    <script src="{% main_template 'assets/js/templatemo.js' %}"></script>
+    <script src="{% static 'assets/js/templatemo.js' %}"></script>
     <!-- Custom -->
-    <script src="{% main_template 'assets/js/custom.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
 
 </body>
 

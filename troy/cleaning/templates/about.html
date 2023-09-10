@@ -1,4 +1,4 @@
-{% load main_template %}
+{% load static %}
 {% block content %}
 {% include 'base.html' %}
 <!DOCTYPE html>
@@ -8,17 +8,17 @@
     <title>Purple Buzz - About Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="{% main_template 'assets/img/apple-icon.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'assets/img/apple-icon.png' %}">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
     <!-- Load Require CSS -->
-    <link href="{% main_template 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
     <!-- Font CSS -->
-    <link href="{% main_template 'assets/css/boxicon.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/boxicon.min.css' %}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Load Tempalte CSS -->
-    <link rel="stylesheet" href="{% main_template 'assets/css/templatemo.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo.css' %}">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% main_template 'assets/css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
 <!--
     
 TemplateMo 561 Purple Buzz
@@ -43,7 +43,7 @@ https://templatemo.com/tm-561-purple-buzz
                     </p>
                 </div>
                 <div class="col-lg-6">
-                    <img src="{% main_template './assets/img/banner-img-02.svg' %}">
+                    <img src="{% static './assets/img/banner-img-02.svg' %}">
                 </div>
             </div>
         </div>
@@ -64,21 +64,21 @@ https://templatemo.com/tm-561-purple-buzz
 
             <div class="col-lg-9 row">
                 <div class="team-member col-md-4">
-                    <img class="team-member-img img-fluid rounded-circle p-4" src="{% main_template './assets/img/team-01.jpg' %}" alt="Card image">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="{% static './assets/img/team-01.jpg' %}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
                         <li>MR.Troy</li>
                         <li>The owner & the mannager</li>
                     </ul>
                 </div>
                 <div class="team-member col-md-4">
-                    <img class="team-member-img img-fluid rounded-circle p-4" src="{% main_template './assets/img/rifatul_islam.png' %}" alt="Card image">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="{% static './assets/img/rifatul_islam.png' %}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
                         <li>Rifatul Islam Majumder</li>
                         <li>Designer & Developer</li>
                     </ul>
                 </div>
                 <div class="team-member col-md-4">
-                    <img class="team-member-img img-fluid rounded-circle p-4" src="{% main_template './assets/img/worker_1.jpg' %}" alt="Card image">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="{% static './assets/img/worker_1.jpg' %}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
                         <li>Team Members</li>
                     </ul>
@@ -177,7 +177,7 @@ https://templatemo.com/tm-561-purple-buzz
         <div class="container my-4">
             <div class="row">
                 <div class="banner-img col-lg-5">
-                    <img src="{% main_template './assets/img/work.svg' %}" class="rounded img-fluid" alt="">
+                    <img src="{% static './assets/img/work.svg' %}" class="rounded img-fluid" alt="">
                 </div>
                 <div class="banner-content col-lg-7 align-self-end">
                     <h2 class="h2 pb-3">Why you choose us?</h2>
@@ -262,11 +262,11 @@ https://templatemo.com/tm-561-purple-buzz
     {% include 'footer.html' %}
 
     <!-- Bootstrap -->
-    <script src="{% main_template 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
     <!-- Templatemo -->
-    <script src="{% main_template 'assets/js/templatemo.js' %}"></script>
+    <script src="{% static 'assets/js/templatemo.js' %}"></script>
     <!-- Custom -->
-    <script src="{% main_template 'assets/js/custom.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
 
 </body>
 

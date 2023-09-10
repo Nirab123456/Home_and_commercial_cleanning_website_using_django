@@ -16,8 +16,14 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-MAIN_TAMPLATE_URL = '/main_template/'
-MAIN_TAMPLATE_ROOT = os.path.join(BASE_DIR, 'main_template')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+
+# Add the following lines at the end of the file.
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'main_template'),
+]
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -26,9 +32,9 @@ MAIN_TAMPLATE_ROOT = os.path.join(BASE_DIR, 'main_template')
 SECRET_KEY = 'django-insecure-rgjndr&73spi-+bsb2rr+lf9ljpe5lf+8^_44-747*_wxvwx$@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['troy-production.up.railway.app']
+ALLOWED_HOSTS = ['127.0.0.1','troy-production.up.railway.app']
 
 
 # Application definition
